@@ -2,6 +2,7 @@
 #David Muratov
 #Rafael Perez
 #Rohaan Mirza
+#Michael Sookdeo
 
 #12-9-2024
 #Emoji project, where we would create 4 emojis
@@ -131,11 +132,11 @@ def draw(canvas):
 frame = simplegui.create_frame("Emoji Project", width, height) 
 
 frame.set_draw_handler(draw)
-frame.add_button("Happy", toggle_face1, 100)
-frame.add_button("Sad", toggle_face2, 100)
-frame.add_button("Angry", toggle_face3, 100)
-frame.add_button("Surprised", toggle_face4, 100)
-frame.add_button("Disgust", toggle_face5, 100)
+frame.add_button("Michael's Emoji", toggle_face1, 100)
+frame.add_button("Aliyah's Emoji", toggle_face2, 100)
+frame.add_button("David's Emoji", toggle_face3, 100)
+frame.add_button("Rohaan's Emoji", toggle_face4, 100)
+frame.add_button("Rafael's Emoji", toggle_face5, 100)
 
 # Remember to start the frame
 frame.start()
