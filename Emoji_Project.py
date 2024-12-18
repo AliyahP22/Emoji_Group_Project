@@ -14,7 +14,7 @@ def canvas_size():
 canvas_size()
 
 # buttons for emojis
-aliyah, david, rohaan, rafael,  = False, False, False, False,
+aliyah, david, rohaan, rafael, michael  = False, False, False, False,False
 
 # Aliyah's emoji
 def draw_aliyah(canvas):
@@ -52,7 +52,7 @@ def draw_david(canvas):
                     (width * 3 / 4 - 10, height / 4 + 20),
                     (width * 3 / 4, height / 4 + 30),
                     (width * 3 / 4 + 10, height / 4 + 20)]
-    canvas.draw_polyline(mouth_points, 20, "black")
+    canvas.draw_polyline(mouth_points, 10, "black")
 
 
 def draw_rohaan(canvas):
@@ -113,7 +113,19 @@ def draw_rafael(canvas):
     canvas.draw_circle((width * 3 / 4 - 30, height * 3 / 4 - 40), 10, 2, "Black", "Black")
     canvas.draw_circle((width * 3 / 4 + 20, height * 3 / 4 + 30), 20, 2, "black", "Red")
 
-
+def draw_michael(canvas):
+    canvas.draw_circle((300, 290), 150, 10, "#FCF4A3", "#FCF4A3")
+    canvas.draw_circle((200, 200), 30, 2, "Black", "White")
+    canvas.draw_circle((400, 200), 30, 2, "Black", "White")
+    canvas.draw_circle((200, 215), 15, 2, "Black", "Black")
+    canvas.draw_circle((400, 215), 15, 2, "Black", "Black")
+    canvas.draw_circle((200, 215), 4, 2, "White", "White")
+    canvas.draw_circle((400, 215), 4, 2, "White", "White")
+    canvas.draw_line((160, 180),(200, 150), 3, "Black")
+    canvas.draw_line((200, 150),(240, 180), 3, "Black")
+    canvas.draw_line((360, 180),(400, 150), 3, "Black")
+    canvas.draw_line((400, 150),(440, 180), 3, "Black")
+    canvas.draw_circle((300, 400), 30, 2, "Black", "Black")
     
 
 # Combine emojis
@@ -126,39 +138,47 @@ def draw(canvas):
         draw_rohaan(canvas)
     if rafael:
         draw_rafael(canvas)
+    if michael:
+        draw_michael(canvas)
 
 # Button handlers
 def show_aliyah():
-    global aliyah,david,rohaan,rafael
-    aliyah,david,rohaan,rafael = True, False, False, False
+    global aliyah,david,rohaan,rafael,michael
+    aliyah,david,rohaan,rafael,michael = True, False, False, False,False
 
 def show_david():
-    global aliyah,david,rohaan,rafael
-    aliyah,david,rohaan,rafael = False, True, False, False
+    global aliyah,david,rohaan,rafael,michael
+    aliyah,david,rohaan,rafael,michael = False, True, False, False,False
 
 def show_rohaan():
-    global aliyah,david,rohaan,rafael
-    aliyah,david,rohaan,rafael = False, False, True, False
+    global aliyah,david,rohaan,rafael,michael
+    aliyah,david,rohaan,rafael,michael = False, False, True, False,False
 
 def show_rafael():
-    global aliyah,david,rohaan,rafael
-    aliyah,david,rohaan,rafael = False, False, False, True
+    global aliyah,david,rohaan,rafael,michael
+    aliyah,david,rohaan,rafael,michael = False, False, False, True,False
+    
+def show_michael():
+    global aliyah,david,rohaan,rafael,michael
+    aliyah,david,rohaan,rafael,michael = False, False, False, False,True
 
 def show_all():
     global aliyah,david,rohaan,rafael
-    aliyah,david,rohaan,rafael = True, True, True, True
+    aliyah,david,rohaan,rafael,michael = True, True, True, True, True
+
 
 # Frame initialization
 frame = simplegui.create_frame("Emoji Project", width, height)
 frame.set_draw_handler(draw)
-
 frame.add_button("Aliyah's Emoji", show_aliyah, 150)
 frame.add_button("David's Emoji", show_david, 150)
 frame.add_button("Rohaan's Emoji", show_rohaan, 150)
 frame.add_button("Rafael's Emoji", show_rafael, 150)
+frame.add_button("Michael's Emoji", show_michael, 150)
 frame.add_button("Show All Emojis", show_all, 150)
 
 frame.start()
+
 
 
 
