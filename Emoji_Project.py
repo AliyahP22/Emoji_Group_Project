@@ -12,19 +12,12 @@ aliyah, david, rohaan, rafael,  = False, False, False, False,
 # Aliyah's emoji
 def draw_aliyah(canvas):
     canvas.draw_circle((width / 4, height / 4), width / 8 - 20, 10, "Gold", "Gold")
-    canvas.draw_circle((width / 4, height / 4), width / 8 - 40, 10, "#FFE4B5", "#FFE4B5")
-    canvas.draw_circle((width / 4 - 30, height / 4 - 30), 10, 2, "Red", "Red")
-    canvas.draw_circle((width / 4 - 20, height / 4 - 30), 10, 2, "Red", "Red")
-    canvas.draw_polygon([(width / 4 - 35, height / 4 - 30),
-                         (width / 4 - 15, height / 4 - 30),
-                         (width / 4 - 25, height / 4 - 10)],
-                        2, "Red", "Red")
-    canvas.draw_circle((width / 4 + 30, height / 4 - 30), 10, 2, "Red", "Red")
-    canvas.draw_circle((width / 4 + 40, height / 4 - 30), 10, 2, "Red", "Red")
-    canvas.draw_polygon([(width / 4 + 25, height / 4 - 30),
-                         (width / 4 + 45, height / 4 - 30),
-                         (width / 4 + 35, height / 4 - 10)],
-                        2, "Red", "Red")
+    canvas.draw_circle((width / 4, height / 4), width / 8 - 40, 10, "gold", "gold")
+    canvas.draw_circle((width / 4 - 30, height / 4 - 40), 20, 2, "black", "white")
+    canvas.draw_circle((width / 4 + 30, height / 4 - 40), 20, 2, "white", "white")
+    canvas.draw_circle((width / 4 - 30, height / 4 - 40), 10, 2, "Black", "White")
+    canvas.draw_circle((width / 4 + 30, height / 4 - 40), 10, 2, "black", "black")
+    canvas.draw_circle((width / 4 - 30, height / 4 - 40), 10, 2, "Black", "black")
     mouth_points = [(width / 4 - 30, height / 4 + 30),
                     (width / 4 - 20, height / 4 + 40),
                     (width / 4, height / 4 + 30),
@@ -54,7 +47,7 @@ def draw_david(canvas):
                     (width * 3 / 4 + 10, height / 4 + 20)]
     canvas.draw_polyline(mouth_points, 5, 'black')
 
-# Wendy's emoji
+
 def draw_rohaan(canvas):
     # Center of the bottom-left quadrant
     center_x = width / 4
@@ -103,27 +96,15 @@ def draw_rohaan(canvas):
     
 # Rafael's emoji
 def draw_rafael(canvas):
-    face_radius = min(width, height) / 8 - 20
-    center_x = width / 4
-    center_y = height * 3 / 4
-    mouth_width = face_radius / 3.5
-    mouth_height = face_radius / 5
     canvas.draw_circle((width * 3 / 4, height * 3 / 4), width / 8 - 20, 2, "yellow", "yellow")
-    canvas.draw_circle((width * 3 / 4 - 30, height * 3 / 4 - 40), 20, 2, "#FCF4A3", "#FCF4A3")
+    canvas.draw_circle((width * 3 / 4 - 30, height * 3 / 4 - 40), 20, 2, "black", "white")
     canvas.draw_circle((width * 3 / 4 + 30, height * 3 / 4 - 40), 20, 2, "Black", "White")
     canvas.draw_circle((width * 3 / 4 - 30, height * 3 / 4 - 40), 10, 2, "Black", "White")
     canvas.draw_circle((width * 3 / 4 + 30, height * 3 / 4 - 40), 10, 2, "black", "black")
     canvas.draw_circle((width * 3 / 4 - 30, height * 3 / 4 - 40), 10, 2, "Black", "White")
     canvas.draw_circle((width * 3 / 4 + 30, height * 3 / 4 - 40), 10, 2, "black", "black")    
     canvas.draw_circle((width * 3 / 4 - 30, height * 3 / 4 - 40), 10, 2, "Black", "Black")
-    mouth_width = face_radius / 3.5
-    mouth_height = face_radius / 5
-    mouth_points = [
-        (center_x - mouth_width / 2, center_y + mouth_height / 2),
-        (center_x, center_y + mouth_height),
-        (center_x + mouth_width / 2, center_y + mouth_height / 2)
-    ]
-    canvas.draw_polyline(mouth_points, 5, "black")
+    canvas.draw_circle((width * 3 / 4 + 20, height * 3 / 4 + 30), 20, 2, "black", "Red")
 
 
     
@@ -171,5 +152,7 @@ frame.add_button("Rafael's Emoji", show_rafael, 150)
 frame.add_button("Show All Emojis", show_all, 150)
 
 frame.start()
+
+
 
 
