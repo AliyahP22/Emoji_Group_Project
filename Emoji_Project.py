@@ -1,3 +1,10 @@
+#Aliyah, David, Michael, Rohaan, Rafael
+#Periods 1-2
+#12-9-2024
+#Emoji project, where we review how to create emojis based on our lesson from projectStem.
+#We would making emojis in different quadrants and buttons in which the user can press
+#and choose whose emoji they would wish to see
+
 import simplegui
 def canvas_size():
     global width, height
@@ -31,21 +38,21 @@ def draw_aliyah(canvas):
 
 #David's emoji
 def draw_david(canvas):
-    canvas.draw_circle((width * 3 / 4, height / 4), width / 8 - 20, 5, 'black', 'yellow')
+    canvas.draw_circle((width * 3 / 4, height / 4), width / 8 - 5, 20, 'black', 'red')
     canvas.draw_polygon([(width * 3 / 4 - 30, height / 4 - 20),
                          (width * 3 / 4 - 20, height / 4 - 40),
                          (width * 3 / 4 - 10, height / 4 - 20)],
-                        5, 'black', 'red')  # Left eye
+                        5, 'black', 'white')  # Left eye
     canvas.draw_polygon([(width * 3 / 4 + 10, height / 4 - 20),
                          (width * 3 / 4 + 20, height / 4 - 40),
                          (width * 3 / 4 + 30, height / 4 - 20)],
-                        5, 'black', 'red')  # Right eye
+                        5, 'black', 'white')  # Right eye
     mouth_points = [(width * 3 / 4 - 30, height / 4 + 20),
                     (width * 3 / 4 - 20, height / 4 + 30),
                     (width * 3 / 4 - 10, height / 4 + 20),
                     (width * 3 / 4, height / 4 + 30),
                     (width * 3 / 4 + 10, height / 4 + 20)]
-    canvas.draw_polyline(mouth_points, 5, 'black')
+    canvas.draw_polyline(mouth_points, 20, "black")
 
 
 def draw_rohaan(canvas):
@@ -70,10 +77,10 @@ def draw_rohaan(canvas):
     canvas.draw_circle((center_x + eye_offset_x, center_y - eye_offset_y), pupil_radius, 2, "black", "blue")
 
   
-    mouth_width = face_radius / 3.5
-    mouth_height = face_radius / 5
+    mouth_width = face_radius / 2.5
+    mouth_height = face_radius / 1.5
     mouth_points = [
-        (center_x - mouth_width / 2, center_y + mouth_height / 2),
+        (center_x + mouth_width / 2, center_y + mouth_height / 2),
         (center_x, center_y + mouth_height),
         (center_x + mouth_width / 2, center_y + mouth_height / 2)
     ]
@@ -152,6 +159,8 @@ frame.add_button("Rafael's Emoji", show_rafael, 150)
 frame.add_button("Show All Emojis", show_all, 150)
 
 frame.start()
+
+
 
 
 
